@@ -1,5 +1,4 @@
-
-/* Reset básico */
+/* RESET */
 *{
   margin: 0;
   padding: 0;
@@ -7,133 +6,134 @@
   font-family: Arial, sans-serif;
 }
 
-/* Corpo */
+/* FUNDO */
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: white;
-    padding: 30px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 15px;
 }
 
-/* Área principal */
-div{
-    max-width: 1000px;
-    margin: auto;
+/* CONTAINER PRINCIPAL */
+body > div{
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* Título principal */
-body > div h1{
-    text-align: center;
-    font-size: 42px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+/* TÍTULO PRINCIPAL */
+body > div > h1{
+  text-align: center;
+  font-size: 32px;
+  margin: 20px 0;
+  text-transform: uppercase;
 }
 
-/* Texto principal */
-body > div p{
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 35px;
+/* TEXTO INTRO */
+body > div > p{
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 25px;
 }
 
-/* Seção dos esportes */
+/* CARD */
 .card{
-    margin-top: 25px;
-    padding: 20px;
-    border-bottom: 2px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
-/* Nome do esporte */
+/* TÍTULO DO CARD */
 .card h1{
-    background-color: white;
-    color: #1e3c72;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 20px;
+  background: white;
+  color: #1e3c72;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
-/* Subtítulo */
+/* SUBTÍTULOS */
 .card h2{
-    color: #ffd700;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    font-size: 24px;
+  color: #ffd700;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
-/* Texto */
+/* TEXTO */
 .card p{
-    text-align: justify;
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 12px;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
-/* Lista */
+/* LISTA */
 .card ul{
-    padding-left: 25px;
+  padding-left: 20px;
 }
 
 .card li{
-    margin-bottom: 8px;
-    font-size: 16px;
+  margin-bottom: 6px;
 }
 
-/* Conteúdo (imagem + texto) */
+/* IMAGEM + TEXTO */
 .conteudo{
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
 
-/* Imagens responsivas */
+/* IMAGEM RESPONSIVA */
 img{
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 10px;
 }
 
-/* Tabela */
+/* TABELA */
 table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: white;
+  color: black;
+  display: block;
+  overflow-x: auto;
+}
+
+th, td{
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 th{
-    background-color: #111;
-    color: white;
-}
-
-td, th{
-    text-align: center;
-    padding: 8px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 24px;
+  background: #111;
   color: white;
-  font-size: 0.95rem;
-  background: rgba(0, 0, 0, 0.95);
-  width: 100%;
-  position: relative;
-  left: 0;
+}
+
+/* FOOTER */
+footer{
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: rgba(0,0,0,0.8);
+  border-radius: 10px;
 }
 
 /* =========================
-   RESPONSIVO (CELULAR)
+   MOBILE
 ========================= */
-
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
   body{
-    padding: 15px;
+    padding: 10px;
+  }
+
+  body > div > h1{
+    font-size: 24px;
   }
 
   .conteudo{
@@ -141,19 +141,7 @@ footer {
     align-items: center;
   }
 
-  body > div h1 {
-    font-size: 28px;
-  }
-
-  .card h1 {
-    font-size: 22px;
-  }
-
-  .card h2 {
-    font-size: 18px;
-  }
-
-  .card p {
-    font-size: 15px;
+  img{
+    max-width: 100%;
   }
 }
